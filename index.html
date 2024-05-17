@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Yuce's e-world</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Poetsen One', cursive;
+            background: linear-gradient(to right, #CD91AC, #FFC1D6);
+            color: #3D3F4B;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 20px #888888;
+            margin-top: 50px;
+        }
+        .button, .neon-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            font-family: 'Poetsen One', cursive;
+            font-weight: 900;
+        }
+        .button i {
+            font-size: 30px;
+            color: #3D3F4B;
+        }
+        .neon-button {
+            background-color: #CD91AC;
+            color: #3D3F4B;
+            font-size: 25px;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px #d5a6bd, 0 0 10px #d5a6bd, 0 0 15px #d5a6bd, 0 0 20px #d5a6bd;
+        }
+        .button:hover, .neon-button:hover {
+            box-shadow: 2px 2px 4px #b18a96, -2px -2px 4px #ffdcf8;
+            transform: translateY(-2px);
+        }
+        .button-group, .neon-button-group {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .top-left {
+            position: fixed;
+            top: 15px;
+            left: 25px;
+            font-family: 'Poetsen One', cursive;
+            font-size: 24px;
+            font-weight: 900;
+        }
+        .home-button {
+            background-color: #fff;
+            color: #CD91AC;
+            font-family: 'Poetsen One', cursive;
+            font-size: 24px;
+            font-weight: 900;
+            padding: 10px 20px;
+            border: 2px solid #CD91AC;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: #CD91AC;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 36px;
+            text-shadow: 3px 3px 3px #888888;
+            font-weight: 900;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        footer {
+            background-color: #3D3F4B;
+            color: #FFFFFF;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-text {
+            color:#FFFFFF;
+        }
+  
+
+    </style>
+</head>
+<body>
+    <div class="top-left">
+        <button class="home-button">
+            <a href="index.html">Home</a>
+        </button>
+    </div>
+    <img src="images/yuce.jpg" alt="Yuce's Picture">
+    <h1>Welcome to Yuce's e-world</h1>
+    <p>So you've stumbled upon me, again...</p>
+    <div class="button-group">
+        <button class="button">
+            <a href="images/wechat.jpg" target="_blank">
+                <i class="fab fa-weixin"></i>
+            </a>
+        </button>
+        <button class="button">
+            <a href="https://www.instagram.com/ucuc_zhu?igsh=czRnaGRvd3p0NHFk&utm_source=qr" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </button>
+        <button class="button">
+            <a href="https://discord.com/channels/@me" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+        </button>
+        <button class="button">
+            <a href="mailto:yzhu844@yahoo.com?subject=Inquiry&body=Hi%20there," target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </button>
+    </div>
+    <div class="neon-button-group">
+    <button class="neon-button" onclick="window.location.href='about.html'">About</button>
+    <button class="neon-button" onclick="window.location.href='project.html'">Project</button>
+    <button class="neon-button" onclick="window.location.href='resume.html'">Resume</button>
+</div>
+
+     <footer>
+        <div class="footer-text">
+            © 2024 Yuce Zhu. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

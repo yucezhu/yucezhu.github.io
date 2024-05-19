@@ -2,16 +2,21 @@
 <html>
 <head>
     <title>About Me</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen One:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             text-align: center;
-            font-family: 'Poetsen One', cursive;
+            font-family: 'Times New Roman', Times, serif;
             background: linear-gradient(to right, #FFDEE9, #B5FFFC);
             color: #3D3F4B;
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
         }
         .center {
             margin-top: 50px;
@@ -36,7 +41,7 @@
         }
         .neon-button {
             background-color: #CD91AC;
-            font-family: 'Poetsen One', cursive;
+            font-family: 'Times New Roman', Times, serif;
             color: #3D3F4B;
             font-size: 25px;
             padding: 10px 20px;
@@ -58,7 +63,7 @@
         }
         .top-left {
             position: fixed;
-            font-family: 'Poetsen One', cursive; /* Use Poetsen One font */
+            font-family: 'Times New Roman', Times, serif;
             top: 20px;
             left: 20px;
             font-size: 24px;
@@ -66,7 +71,7 @@
         }
         .home-button {
             background-color: #CD91AC;
-            font-family: 'Poetsen One', cursive; /* Use Poetsen One font */
+            font-family: 'Times New Roman', Times, serif;
             color: #3D3F4B;
             font-size: 24px;
             padding: 10px 20px;
@@ -89,47 +94,54 @@
                 font-size: 20px;
                 padding: 5px 10px;
             }
-            footer {
+            .center {
+                font-size: 30px;
+            }
+        }
+        footer {
             background-color: #3D3F4B;
             color: #FFFFFF;
             padding: 10px 0;
             font-size: 14px;
             text-align: center;
+            width: 100%;
             position: relative;
             bottom: 0;
-            width: 100%;
         }
         .footer-text {
-            color:#FFFFFF;
+            color: #FFFFFF;
         }
-  
+        .black-text {
+            color: #000000;
+        }
     </style>
 </head>
 <body>
     <div class="top-left">
         <button class="home-button" onclick="window.location.href='index.html'">Home</button>
     </div>
-    <div class="center">
-        About Me
+    <div class="content">
+        <div class="center">
+            About Me
+        </div>
+        <div class="rectangle-box">
+            Welcome! I am Yuce Zhu, a distinguished graduate of the <a href="https://www.uwo.ca/index.html" target="_blank" class="black-text">University of Western Ontario</a>, holding a degree in Financial Economics. This September, I will be advancing my academic pursuits at <a href="https://www.gatech.edu/" target="_blank" class="black-text">Georgia Institute of Technology</a>, delving into the cutting-edge field of Computer Science with a specialization in Human-Computer Interaction (HCI).
+
+            My academic and professional journey has been marked by a relentless pursuit of excellence and innovation. With mastery in programming languages such as R, Python, VBA, and JAVA, I have consistently demonstrated my prowess in data analysis, financial modeling, and the creation of sophisticated cross-platform applications. My web development expertise, encompassing HTML and CSS, has resulted in numerous successful projects, underscoring my technical versatility and creative problem-solving abilities.
+
+            In addition to my technical acumen, my extensive experience in client services has sharpened my communication and negotiation skills, allowing me to seamlessly translate complex financial theories into practical, impactful solutions. I am driven by a passion for pushing the boundaries of technology to meet client needs and tackle pressing challenges with innovative solutions.
+
+            I invite you to explore my projects and blog, which reflect my professional capabilities and intellectual curiosity. Thank you for visiting, and I look forward to the opportunity to connect and collaborate!
+        </div>
+        <div class="neon-button-group">
+            <button class="neon-button" onclick="window.location.href='about.html'">About</button>
+            <button class="neon-button" onclick="window.location.href='project.html'">Project</button>
+            <button class="neon-button" onclick="window.location.href='resume.html'">Resume</button>
+        </div>
     </div>
-    <div class="rectangle-box">
-         Welcome! I am Yuce Zhu, a distinguished graduate of the University of Western Ontario, holding a degree in Financial Economics. This September, I will be advancing my academic pursuits at Georgia Institute of Technology, delving into the cutting-edge field of Computer Science with a specialization in Human-Computer Interaction (HCI).
-
-         My academic and professional journey has been marked by a relentless pursuit of excellence and innovation. With mastery in programming languages such as R, Python, VBA, and JAVA, I have consistently demonstrated my prowess in data analysis, financial modeling, and the creation of sophisticated cross-platform applications. My web development expertise, encompassing HTML and CSS, has resulted in numerous successful projects, underscoring my technical versatility and creative problem-solving abilities.
-
-         In addition to my technical acumen, my extensive experience in client services has sharpened my communication and negotiation skills, allowing me to seamlessly translate complex financial theories into practical, impactful solutions. I am driven by a passion for pushing the boundaries of technology to meet client needs and tackle pressing challenges with innovative solutions.
-
-         I invite you to explore my projects and blog, which reflect my professional capabilities and intellectual curiosity. Thank you for visiting, and I look forward to the opportunity to connect and collaborate!
-    </div>
- <div class="neon-button-group">
-    <button class="neon-button" onclick="window.location.href='about.html'">About</button>
-    <button class="neon-button" onclick="window.location.href='project.html'">Project</button>
-    <button class="neon-button" onclick="window.location.href='resume.html'">Resume</button>
-</div>
-
     <footer>
         <div class="footer-text">
-            © 2024 Yuce Zhu. All rights reserved.
+            Designed by Yuce Zhu © 2024. All rights reserved.
         </div>
     </footer>
 </body>

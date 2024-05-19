@@ -14,8 +14,12 @@
             color: #3D3F4B;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .container {
+            flex: 1;
             padding: 20px;
         }
         h1 {
@@ -77,25 +81,46 @@
             text-decoration: none;
             color: inherit;
         }
+        .underline {
+            text-decoration: underline;
+        }
         footer {
             background-color: #3D3F4B;
             color: #FFFFFF;
             padding: 10px 0;
             font-size: 14px;
             text-align: center;
-            position: relative;
-            bottom: 0;
             width: 100%;
+            margin-top: auto;
         }
         .footer-text {
-            color:#FFFFFF;
+            color: #FFFFFF;
+        }
+        @media (max-width: 600px) {
+            .project {
+                max-width: 90%;
+                margin: 10px auto;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .project h2 {
+                font-size: 1.2em;
+            }
+            .project p, .project ul li {
+                font-size: 0.9em;
+            }
+            .home-button {
+                font-size: 20px;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="top-left">
-         <button class="home-button" onclick="window.location.href='index.html'">Home</button>
-      
+        <button class="home-button" onclick="window.location.href='index.html'">Home</button>
     </div>
     <div class="container">
         <h1>My Project Portfolio</h1>
@@ -124,7 +149,7 @@
             <p>Developed a cutting-edge, responsive movie-themed website that features reviews, custom videos, animations, and original content. Utilizing HTML5, CSS, and Affinity Photo, the project showcased a seamless blend of technical prowess and creative web development skills.
             For the Barbie movie trailer, an extensive analysis of YouTube comments was conducted using Python and VBA to explore audience reactions and sentiment trends. Leveraging Python's advanced natural language processing techniques, the project processed and performed sentiment analysis on the comment data. Additionally, scripts written in VBA fetched comment data from the YouTube API, pre-processed, and visualized it effectively.
             The analysis focused on the impact of commenter nationality on viewpoints, presenting differences in viewer reactions to the trailer across various countries. This provided critical data support and insights for targeted marketing and audience engagement strategies.</p>
-            <p><strong>Achievements:</strong>
+            <p><strong>Achievements:</strong></p>
             <ul>
                 <li>Delivered profound insights into audience reactions to the Barbie movie trailer, offering valuable information for marketing strategies and audience targeting.</li>
                 <li>Established a foundation for further research into the behaviors and preferences of different audience segments.</li>
@@ -133,11 +158,11 @@
         </div>
 
         <div class="project">
-            <h2>Wisconsin Breast Cancer Database Analysis</h2>
+            <h2><a href="https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original" target="_blank" class="underline">Wisconsin Breast Cancer Database</a> Analysis</h2>
             <p><strong>Date:</strong> March 20, 2024</p>
             <p><strong>Technologies:</strong> Python, VBA</p>
             <p><strong>Project Description:</strong></p>
-            <p>This project focused on the comprehensive analysis of the Wisconsin Breast Cancer Database from the University of Wisconsin Hospital, a dataset provided by Dr. William H. Wolberg. Leveraging Python and VBA, the project delved into clinical data on breast cancer samples to uncover critical insights.</p>
+            <p>This project focused on the comprehensive analysis of the <a href="https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original" target="_blank" class="underline">Wisconsin Breast Cancer Database</a> from the University of Wisconsin Hospital, a dataset provided by <a href="https://scholar.google.com/citations?user=R-kw9JYAAAAJ&hl=en" target="_blank" class="underline">Dr. William H. Wolberg</a>. Leveraging Python and VBA, the project delved into clinical data on breast cancer samples to uncover critical insights.</p>
             <p><strong>Objectives and Methodology:</strong></p>
             <p>Utilizing advanced machine learning techniques, the project aimed to identify significant associations between various clinical features and breast cancer. The analysis facilitated the construction of robust classification models, aiding in precise medical diagnoses. The methodology encompassed a thorough literature review, meticulous data preprocessing, and sophisticated visualization and analysis.</p>
             <p><strong>Achievements:</strong></p>
@@ -154,11 +179,11 @@
             <p><strong>Project Description:</strong></p>
             <p>As the team leader, I spearheaded the development and presentation of a groundbreaking partnership proposal between IBM and Superpowered. Our project, praised by the judges, highlighted a visionary approach to technology integration and strategic market expansion, showcasing a forward-thinking solution to enhance both companies' market positions and technological capabilities.</p>
         </div>
-        <footer>
+    </div>
+    <footer>
         <div class="footer-text">
-            © 2024 Yuce Zhu. All rights reserved.
+            Designed by Yuce Zhu © 2024. All rights reserved.
         </div>
     </footer>
-    </div>
 </body>
 </html>

@@ -95,6 +95,44 @@
             font-size: 1em;
             line-height: 1.5;
         }
+        .location {
+            color: #000;
+        }
+        .position {
+            color: 	#00CED1;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .main-content, .sidebar {
+                padding: 0;
+                border: none;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .section h2, .skills h2, .certifications h2, .languages h2 {
+                font-size: 1.5em;
+            }
+            .section ul li, .skills ul li, .certifications ul li, .languages ul li {
+                font-size: 0.9em;
+                padding: 5px 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .section h2, .skills h2, .certifications h2, .languages h2 {
+                font-size: 1.2em;
+            }
+            .section ul li, .skills ul li, .certifications ul li, .languages ul li {
+                font-size: 0.8em;
+                padding: 5px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -117,14 +155,14 @@
             <div class="section">
                 <h2>Work Experience</h2>
                 <ul>
-                    <li><strong>Manager Assistant, Western Oxbury Medical Clinic (01/2024 - 05/2024):</strong>
+                    <li><strong class="position">Manager Assistant, Western Oxbury Medical Clinic (01/2024 - 05/2024):</strong> <span class="location">London, Ontario, Canada</span>
                         <ul>
                             <li>Streamlined the scheduling process for doctors using an advanced appointment system, significantly enhancing patient satisfaction and clinic efficiency.</li>
                             <li>Participated in specialized training programs to boost data entry speed and accuracy, ensuring seamless medical services.</li>
                             <li>Collaborated closely with physicians and clinic staff to swiftly address and resolve patient appointment and visit issues, fostering a highly effective and cohesive work environment.</li>
                         </ul>
                     </li>
-                    <li><strong>Advertising and Marketing Specialist, We Care Realty Inc (02/2021 - 12/2023):</strong>
+                    <li><strong class="position">Advertising and Marketing Specialist, We Care Realty Inc (02/2021 - 12/2023):</strong> <span class="location">London, Ontario, Canada</span>
                         <ul>
                             <li>Led and orchestrated a series of innovative advertising and marketing campaigns, successfully captivating an audience of over 3,000 potential customers, and significantly enhancing brand visibility.</li>
                             <li>Pioneered in-depth tax-related educational forums, consistently surpassing sales benchmarks and solidifying the company's market-leading position.</li>
@@ -133,7 +171,7 @@
                             <li>Established robust partnerships and networks, leveraging cross-functional collaboration to amplify campaign reach and impact.</li>
                         </ul>
                     </li>
-                    <li><strong>Human Resources Manager, Amine Coco Technology & Service Inc (08/2020 - 01/2021):</strong>
+                    <li><strong class="position">Human Resources Manager, Amine Coco Technology & Service Inc (08/2020 - 01/2021):</strong> <span class="location">London, Ontario, Canada</span>
                         <ul>
                             <li>Directed training programs for over 10 new employees, achieving a 90% satisfaction rate and a 25% increase in productivity.</li>
                             <li>Initiated an employee relations survey, addressing 80% of reported issues within 3 days and resulting in a 30% reduction in subsequent complaints.</li>
@@ -158,6 +196,11 @@
                 <h2>Certifications</h2>
                 <ul>
                     <li><strong>Leadership Certificate:</strong> University of Western Ontario</li>
+                    <li><strong>Music Certificate:</strong></li>
+                    <ul>
+                        <li>Shanghai Conservatory of Music Examination Committee Erhu 10th Grade Level</li>
+                        <li>Advanced Level of Music Theory of Shanghai Conservatory of Music Examination Committee</li>
+                    </ul>
                 </ul>
             </div>
 
@@ -168,9 +211,8 @@
                     <li><strong>Chinese (Mandarin):</strong> Native</li>
                     <li><strong>Japanese:</strong> Intermediate</li>
                 </ul>
+            </div>
+        </div>
     </div>
- 
-          
-            
 </body>
 </html>

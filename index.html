@@ -1,26 +1,31 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Yuce's e-world</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(to right, #CD91AC, #FFC1D6);
             color: #3D3F4B;
             margin: 0;
             padding: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            text-align: center;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .content {
             flex: 1;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
         }
         img {
             width: 100%;
@@ -30,6 +35,10 @@
             border: 5px solid #fff;
             box-shadow: 0 0 20px #888888;
             margin-top: 50px;
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.05);
         }
         .button, .neon-button {
             background-color: transparent;
@@ -43,6 +52,11 @@
         .button i {
             font-size: 30px;
             color: #3D3F4B;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .button:hover i {
+            transform: scale(1.2);
+            color: #CD91AC;
         }
         .neon-button {
             background-color: #CD91AC;
@@ -53,9 +67,16 @@
             border-radius: 10px;
             box-shadow: 0 0 5px #d5a6bd, 0 0 10px #d5a6bd, 0 0 15px #d5a6bd, 0 0 20px #d5a6bd;
         }
-        .button:hover, .neon-button:hover {
-            box-shadow: 2px 2px 4px #b18a96, -2px -2px 4px #ffdcf8;
-            transform: translateY(-2px);
+        .neon-button:hover {
+            animation: neonGlow 1.5s infinite alternate;
+        }
+        @keyframes neonGlow {
+            0%, 100% {
+                box-shadow: 0 0 5px #d5a6bd, 0 0 10px #d5a6bd, 0 0 15px #d5a6bd, 0 0 20px #d5a6bd;
+            }
+            50% {
+                box-shadow: 0 0 20px #ff79c6, 0 0 30px #ff79c6, 0 0 40px #ff79c6, 0 0 50px #ff79c6;
+            }
         }
         .button-group, .neon-button-group {
             display: flex;
@@ -105,15 +126,38 @@
             text-decoration: none;
         }
         footer {
-            background-color: #3D3F4B;
+            background: linear-gradient(to right, #3D3F4B, #5C6173);
             color: #FFFFFF;
-            padding: 10px 0;
+            padding: 20px 0;
             font-size: 14px;
             text-align: center;
             width: 100%;
         }
         .footer-text {
-            color:#FFFFFF;
+            color: #FFFFFF;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .content img {
+                width: 80%;
+                max-width: 250px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .button-group {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -124,9 +168,9 @@
         </button>
     </div>
     <div class="content">
-        <img src="images/yuce.jpg" alt="Yuce's Picture">
+        <img src="images/yuce.jpg" alt="Portrait of Yuce smiling">
         <h1>Welcome to Yuce's e-world</h1>
-        <p>So you've stumbled upon me, again...</p>
+        <p>Welcome back! It's great to see you exploring my e-world again.</p>
         <div class="button-group">
             <button class="button">
                 <a href="images/wechat.jpg" target="_blank">
@@ -150,9 +194,11 @@
             </button>
         </div>
         <div class="neon-button-group">
-            <button class="neon-button" onclick="window.location.href='about.html'">About</button>
-            <button class="neon-button" onclick="window.location.href='project.html'">Project</button>
-            <button class="neon-button" onclick="window.location.href='resume.html'">Resume</button>
+            <button class="neon-button" onclick="window.location.href='about.html'">Learn More About Me</button>
+            <button class="neon-button" onclick="window.location.href='project.html'">See My Projects</button>
+            <button class="neon-button" onclick="window.location.href='resume.html'">View My Resume</button>
+            <button class="neon-button" onclick="window.location.href='Auto.html'">Auto & Property Insurance Quotes</button>
+            <button class="neon-button" onclick="window.location.href='design.html'">Design Services</button>
         </div>
     </div>
      <footer>

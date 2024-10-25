@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: 'Poetsen One', sans-serif;
-            background: linear-gradient(to right, #B5FFFC, #FFEC99);
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #84fab0, #8fd3f4);
             margin: 0;
             padding: 0;
             color: #333;
@@ -23,9 +23,9 @@
             max-width: 1000px;
             margin: 20px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: row;
             text-align: left;
@@ -44,23 +44,24 @@
             text-align: center;
         }
         .header h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin: 0;
-            color: #444;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            color: #222;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
         }
         .section {
             margin: 20px 0;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         }
         .section h2 {
-            font-size: 2em;
-            border-bottom: 2px solid #333;
+            font-size: 2.5em;
+            border-bottom: 3px solid #444;
             padding-bottom: 10px;
             margin-bottom: 20px;
+            color: #333;
         }
         .section ul {
             list-style: none;
@@ -68,21 +69,21 @@
             margin: 0;
         }
         .section ul li {
-            padding: 10px 0;
-            font-size: 1em;
-            line-height: 1.5;
+            padding: 12px 0;
+            font-size: 1.1em;
+            line-height: 1.6;
         }
         .skills, .certifications, .languages {
             text-align: left;
             margin: 20px 0;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         }
         .skills h2, .certifications h2, .languages h2 {
-            font-size: 2em;
-            border-bottom: 2px solid #333;
+            font-size: 2.2em;
+            border-bottom: 3px solid #444;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
@@ -92,14 +93,24 @@
         }
         .skills ul li, .certifications ul li, .languages ul li {
             padding: 10px 0;
-            font-size: 1em;
-            line-height: 1.5;
+            font-size: 1.1em;
+            line-height: 1.6;
         }
         .location {
-            color: #000;
+            color: #555;
+            font-weight: bold;
         }
         .position {
-            color: 	#00CED1;
+            color: #008080;
+            font-weight: bold;
+        }
+        a {
+            color: #008080;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #FF6347;
         }
         @media (max-width: 768px) {
             .container {
@@ -111,6 +122,18 @@
                 border: none;
             }
             .header h1 {
+                font-size: 2.5em;
+            }
+            .section h2, .skills h2, .certifications h2, .languages h2 {
+                font-size: 1.8em;
+            }
+            .section ul li, .skills ul li, .certifications ul li, .languages ul li {
+                font-size: 1em;
+                padding: 5px 0;
+            }
+        }
+        @media (max-width: 480px) {
+            .header h1 {
                 font-size: 2em;
             }
             .section h2, .skills h2, .certifications h2, .languages h2 {
@@ -118,18 +141,6 @@
             }
             .section ul li, .skills ul li, .certifications ul li, .languages ul li {
                 font-size: 0.9em;
-                padding: 5px 0;
-            }
-        }
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.5em;
-            }
-            .section h2, .skills h2, .certifications h2, .languages h2 {
-                font-size: 1.2em;
-            }
-            .section ul li, .skills ul li, .certifications ul li, .languages ul li {
-                font-size: 0.8em;
                 padding: 5px 0;
             }
         }
@@ -143,82 +154,96 @@
             </div>
 
             <div class="section">
-                 <h2>Education</h2>
-                <li>University of Western Ontario, BA, Specialization in Finance & Economics</li>
-                
-                <li>Georgia Institute of Technology,MSc, Specialization in Human-Computer Interaction</li>
-                
+                <h2>Education</h2>
+                <ul>
+                    <li>University of Western Ontario, BA, Specialization in Finance & Economics</li>
+                    <li>Georgia Institute of Technology, MSc, Specialization in Human-Computer Interaction</li>
+                </ul>
                 <h2>Projects</h2>
-         
-                    <li>Wisconsin Breast Cancer Database Analysis (March 20, 2024):</li>
-                    
-                    <li>Technology Consulting - Ivey School of Business (January 28, 2024):</li>
-         
+                <ul>
+                    <li><strong>Wisconsin Breast Cancer Database Analysis (March 20, 2024):</strong> Data analysis using Python and R.</li>
+                    <li><strong>Technology Consulting - Ivey School of Business (January 28, 2024):</strong> Provided consulting insights for emerging technologies.</li>
+                </ul>
             </div>
 
             <div class="section">
                 <h2>Work Experience</h2>
                 <ul>
-                       <li><strong class="position">Math Expert for AI Training,Scale AI (06/2024 - Current),:</strong> <span class="location">London, Ontario, Canada</span>
-                    <li>Train AI Models: Design and answer domain-specific questions to enhance the accuracy and efficiency of AI models.</li>
-                    <li>Evaluate and Rank: Systematically evaluate and rank AI- generated responses, using quantitative analysis to optimize model performance.</li>
-                    <li>Apply Domain Knowledge: Utilize expertise to assess the authenticity and relevance of AI-generated text to ensure high quality and accuracy of the output.</li>
-                           
+                      <li><strong class="position">Account Executive, All-risks Insurance Brokers Limited (10/2024 - Current):</strong> <span class="location">London, Ontario, Canada</span>
+                        <ul>
+                            <li>Client Management: Cultivate and maintain relationships with a diverse client portfolio, ensuring high satisfaction and retention.</li>
+                            <li>Policy Administration: Oversee policy issuance, renewals, and claims support, ensuring compliance and accuracy.</li>
+                            <li>Risk Assessment: Analyze client risk profiles to recommend tailored insurance solutions and mitigation strategies.</li>
+                            <li>Market Strategy: Stay updated on industry trends and competitor activities to inform and implement effective sales strategies.</li>
+                            <li>Achievements: Increased client retention by 15%, streamlined policy processes reducing processing time by 20%, and contributed significantly to revenue growth.</li>
+                        </ul>
+                    <li><strong class="position">Math Expert for AI Training, Scale AI (06/2024 - Current):</strong> <span class="location">London, Ontario, Canada</span>
+                        <ul>
+                            <li>Train AI Models: Design and answer domain-specific questions to enhance the accuracy and efficiency of AI models.</li>
+                            <li>Evaluate and Rank: Systematically evaluate and rank AI-generated responses to optimize model performance.</li>
+                            <li>Apply Domain Knowledge: Assess the authenticity and relevance of AI-generated text to ensure high quality and accuracy.</li>
+                        </ul>
+                    </li>
                     <li><strong class="position">Manager Assistant, Western Oxbury Medical Clinic (01/2024 - 05/2024):</strong> <span class="location">London, Ontario, Canada</span>
-                         
-                            <li>Streamlined the scheduling process for doctors using an advanced appointment system, significantly enhancing patient satisfaction and clinic efficiency.</li>
-                            <li>Participated in specialized training programs to boost data entry speed and accuracy, ensuring seamless medical services.</li>
-                            <li>Collaborated closely with physicians and clinic staff to swiftly address and resolve patient appointment and visit issues, fostering a highly effective and cohesive work environment.</li>
-                        
-                    </li>
-                    <li><strong class="position">Advertising and Marketing Specialist, We Care Realty Inc (02/2021 - 12/2023):</strong> <span class="location">London, Ontario, Canada</span>
                         <ul>
-                            <li>Led and orchestrated a series of innovative advertising and marketing campaigns, successfully captivating an audience of over 3,000 potential customers, and significantly enhancing brand visibility.</li>
-                            <li>Pioneered in-depth tax-related educational forums, consistently surpassing sales benchmarks and solidifying the company's market-leading position.</li>
-                            <li>Designed and executed highly effective market promotion strategies, driving significant improvements in customer engagement and conversion rates.</li>
-                            <li>Utilized data-driven analytical methods to optimize marketing activities, significantly boosting return on investment (ROI) and ensuring maximum efficiency of advertising expenditures.</li>
-                            <li>Established robust partnerships and networks, leveraging cross-functional collaboration to amplify campaign reach and impact.</li>
+                            <li>Streamlined the scheduling process for doctors using an advanced appointment system, enhancing patient satisfaction.</li>
+                            <li>Boosted data entry speed and accuracy through specialized training programs.</li>
+                            <li>Collaborated closely with physicians to resolve patient appointment issues swiftly.</li>
                         </ul>
                     </li>
-                    <li><strong class="position">Human Resources Manager, Amine Coco Technology & Service Inc (08/2020 - 01/2021):</strong> <span class="location">London, Ontario, Canada</span>
+                    <li><strong class="position">Advertising and Marketing Specialist, We Care Realty Inc (02/2021 - 12/2023):</strong> <span class="location">Toronto, Ontario, Canada</span>
                         <ul>
-                            <li>Directed training programs for over 10 new employees, achieving a 90% satisfaction rate and a 25% increase in productivity.</li>
-                            <li>Initiated an employee relations survey, addressing 80% of reported issues within 3 days and resulting in a 30% reduction in subsequent complaints.</li>
+                            <li>Led marketing campaigns, reaching over 3,000 potential customers.</li>
+                            <li>Organized tax-related educational forums and consistently surpassed sales benchmarks.</li>
+                            <li>Utilized data-driven methods to optimize marketing activities, improving ROI.</li>
                         </ul>
+                    </li>
+                    <li><strong class="position">Human Resources Manager, Amine Coco Technology & Service Inc (08/2020 - 01/2021):</strong> <span class="location">Waterloo, Ontario, Canada</span>
+                        <ul>
+                            <li>Directed training programs for over 10 new employees, achieving a 90% satisfaction rate.</li>
+                            <li>Initiated an employee relations survey, reducing complaints by 30%.</li>
+                        </ul>
+                  
                     </li>
                 </ul>
             </div>
         </div>
-        
+
         <div class="sidebar">
             <div class="skills">
                 <h2>Skills</h2>
                 <ul>
-                    <li><strong>Programming:</strong> R, Python, VBA, JAVA</li>
-                    <li><strong>Design:</strong> Affinity Photo, Nomad Sculpt</li>
-                    <li><strong>Front-end Skills:</strong> HTML, CSS</li>
-                    <li><strong>Miscellaneous:</strong> Microsoft Office, FileZilla, Audacity, Brackets, LaTeX</li>
+                    <li><i class="fas fa-code"></i> <strong>Programming:</strong> R, Python, VBA, Dartpad</li>
+                    <li><i class="fas fa-paint-brush"></i> <strong>Design:</strong> Affinity Photo, Nomad Sculpt, Figma</li>
+                    <li><i class="fas fa-laptop-code"></i> <strong>Front-end Skills:</strong> HTML, CSS</li>
+                    <li><i class="fas fa-tools"></i> <strong>Miscellaneous:</strong> Microsoft Office, FileZilla, Audacity, Brackets, LaTeX</li>
+                    <li><i class="fas fa-user-friends"></i> <strong>Soft Skills:</strong> Customer Service, Multitasking Abilities, Organization and Time Management, Complaint Resolution, Call Management, Sales Monitoring, Department Management, Social Media Marketing, Orienting and Training</li>
                 </ul>
             </div>
-            
+
             <div class="certifications">
                 <h2>Certifications</h2>
                 <ul>
-                     
-                    <ul>
-                        <li>PL-300 : Microsoft Power BI Data Analyst</li>
-                        <li>WorldQuant : Applied Data Science Lab</li>
-                        <li>Alteryx Designer Core Certification</li>
-                    </ul>
+                    <li><i class="fas fa-certificate"></i> PL-300: Microsoft Power BI Data Analyst</li>
+                    <li><i class="fas fa-flask"></i> GCP – Social and Behavioral Research Best Practices for Clinical Research</li>
+                    <li><i class="fas fa-users"></i> Group 2 Social / Behavioral Research Investigators and Key Personnel</li>
+                    <li><i class="fas fa-flask"></i> WorldQuant: Applied Data Science Lab</li>
+                    <li><i class="fas fa-database"></i> Alteryx Designer Core Certification</li>
+                </ul>
+                     </div>
+                 <div class="certifications">
+                <h2>Licenses</h2>
+                <ul>
+                    <li><i class="fas fa-id-card"></i> RIBO (Registered Insurance Brokers of Ontario)</li>
                 </ul>
             </div>
 
             <div class="languages">
                 <h2>Languages</h2>
                 <ul>
-                    <li><strong>English:</strong> Fluent</li>
-                    <li><strong>Chinese (Mandarin):</strong> Native</li>
-                    <li><strong>Japanese:</strong> Intermediate</li>
+                    <li><i class="fas fa-language"></i> <strong>English:</strong> Fluent</li>
+                    <li><i class="fas fa-language"></i> <strong>Chinese (Mandarin):</strong> Native</li>
+                    <li><i class="fas fa-language"></i> <strong>Japanese:</strong> Intermediate</li>
                 </ul>
             </div>
         </div>

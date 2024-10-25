@@ -1,12 +1,15 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             text-align: center;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(to right, #FFDEE9, #B5FFFC);
             color: #3D3F4B;
             margin: 0;
@@ -17,13 +20,14 @@
         }
         .content {
             flex: 1;
+            padding: 20px;
         }
         .center {
             margin-top: 50px;
-            font-size: 40px;
+            font-size: 2.5em;
             font-weight: bold;
-            border-bottom: 3px solid #3D3F4B;
-            display: inline-block;
+            color: #CD91AC;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             padding-bottom: 10px;
         }
         .rectangle-box {
@@ -31,29 +35,38 @@
             max-width: 1020px;
             height: auto;
             background-color: #FFFFFF;
-            margin: 20px auto;
-            padding: 20px;
-            border: 2px solid #3D3F4B;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            font-size: 18px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            font-size: 1.1em;
             color: #3D3F4B;
             text-align: left;
+            line-height: 1.6;
+        }
+        .rectangle-box a {
+            color: #CD91AC;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .rectangle-box a:hover {
+            text-decoration: underline;
         }
         .neon-button {
             background-color: #CD91AC;
-            font-family: 'Times New Roman', Times, serif;
-            color: #3D3F4B;
-            font-size: 25px;
-            padding: 10px 20px;
-            margin: 10px;
+            color: #FFFFFF;
+            font-size: 1.2em;
+            padding: 12px 24px;
+            margin: 15px;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         .neon-button:hover {
-            box-shadow: 2px 2px 4px #b18a96, -2px -2px 4px #ffdcf8;
-            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            transform: translateY(-3px);
         }
         .button-group {
             display: flex;
@@ -63,56 +76,53 @@
         }
         .top-left {
             position: fixed;
-            font-family: 'Times New Roman', Times, serif;
             top: 20px;
             left: 20px;
-            font-size: 24px;
-            font-weight: bold;
         }
         .home-button {
             background-color: #CD91AC;
-            font-family: 'Times New Roman', Times, serif;
-            color: #3D3F4B;
-            font-size: 24px;
-            padding: 10px 20px;
+            color: #FFFFFF;
+            font-size: 1.1em;
+            padding: 12px 20px;
             border: none;
+            border-radius: 8px;
             cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, transform 0.2s;
         }
         .home-button:hover {
-            box-shadow: 2px 2px 4px #b18a96, -2px -2px 4px #ffdcf8;
+            background-color: #A8687D;
+            transform: translateY(-2px);
         }
         @media (max-width: 768px) {
             .rectangle-box {
                 width: 90%;
             }
             .neon-button {
-                font-size: 20px;
-                margin: 5px;
+                font-size: 1em;
+                margin: 10px;
+                padding: 10px 20px;
             }
             .home-button {
-                font-size: 20px;
-                padding: 5px 10px;
+                font-size: 1em;
+                padding: 8px 16px;
             }
             .center {
-                font-size: 30px;
+                font-size: 2em;
             }
         }
         footer {
             background-color: #3D3F4B;
             color: #FFFFFF;
-            padding: 10px 0;
-            font-size: 14px;
+            padding: 20px 0;
+            font-size: 0.9em;
             text-align: center;
             width: 100%;
-            position: relative;
-            bottom: 0;
+            margin-top: auto;
+            box-shadow: 0 -3px 15px rgba(0,0,0,0.1);
         }
         .footer-text {
             color: #FFFFFF;
-        }
-        .black-text {
-            color: #000000;
         }
     </style>
 </head>
@@ -125,14 +135,19 @@
             About Me
         </div>
         <div class="rectangle-box">
-            Welcome! I am Yuce Zhu, a distinguished graduate of the <a href="https://www.uwo.ca/index.html" target="_blank" class="black-text">University of Western Ontario</a>,with a background in Finance and Economics.and I’m currently advancing my studies in Human-Computer Interaction (HCI) at <a href="https://www.gatech.edu/" target="_blank" class="black-text">Georgia Institute of Technology</a>, My skill set encompasses data analysis, financial modeling, and developing cross-platform applications, as well as web development utilizing HTML and CSS. I am proficient in R, Python, VBA, and Java, with a strong track record in client services, communication, and negotiation.
-
-I am deeply passionate about leveraging technology to tackle intricate challenges and deliver tailored solutions for clients. Feel free to explore my projects and blog to gain insight into my work. I look forward to connecting with you!
-
-</div>
-        <div class="neon-button-group">
+            <p>Hello! I'm Yuce Zhu, a proud graduate of the <a href="https://www.uwo.ca/index.html" target="_blank">University of Western Ontario</a> with a solid foundation in Finance and Economics. Currently, I'm advancing my expertise by pursuing a degree in Human-Computer Interaction (HCI) at the <a href="https://www.gatech.edu/" target="_blank">Georgia Institute of Technology</a>. My diverse skill set includes:</p>
+            <ul>
+                <li><strong>Data Analysis & Financial Modeling:</strong> Leveraging tools like VBA and Python to derive actionable insights.</li>
+                <li><strong>Application & Web Development:</strong> Creating seamless cross-platform applications and responsive websites using HTML, CSS</li>
+                <li><strong>UX/UI Design:</strong> Proficient in DartPad, Figma, and various design programs to craft intuitive user experiences.</li>
+            </ul>
+            <p>In addition to my academic pursuits, I serve as an Insurance Account Manager, specializing in auto and homeowners insurance for leading providers such as Aviva, Intact, CAA, and Chubb. In this role, I blend my analytical skills with a client-centric approach to deliver tailored insurance solutions that meet diverse client needs.</p>
+            <p>I am passionate about leveraging technology to solve complex challenges and deliver customized solutions for clients. Whether it's through developing innovative applications or providing comprehensive insurance services, my goal is to create value and drive positive outcomes.</p>
+            <p>For more information about my services and to request quotes, please explore the software tools below!</p>
+        </div>
+        <div class="button-group">
             <button class="neon-button" onclick="window.location.href='about.html'">About</button>
-            <button class="neon-button" onclick="window.location.href='project.html'">Project</button>
+            <button class="neon-button" onclick="window.location.href='project.html'">Projects</button>
             <button class="neon-button" onclick="window.location.href='resume.html'">Resume</button>
         </div>
     </div>

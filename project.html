@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
     <style>
         body {
             text-align: center;
-            font-family: 'Poetsen One', cursive;
-            background-color: #F7F7F7;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #F7F7F7, #EDEDED);
             color: #3D3F4B;
             margin: 0;
             padding: 0;
@@ -20,42 +20,59 @@
         }
         .container {
             flex: 1;
-            padding: 20px;
+            padding: 40px;
         }
         h1 {
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             color: #CD91AC;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
         .project {
             background-color: #FFF;
-            border-radius: 10px;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            margin: 30px auto;
+            padding: 30px;
+            max-width: 900px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
             text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         .project h2 {
-            font-size: 1.5em;
+            font-size: 1.8em;
             color: #CD91AC;
+            margin-bottom: 15px;
         }
         .project p {
-            font-size: 1em;
-            color: #666;
-            line-height: 1.5;
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
         }
         .project ul {
             list-style: none;
             padding: 0;
         }
         .project ul li {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #555;
+            padding-left: 20px;
+            position: relative;
+        }
+        .project ul li::before {
+            content: "\2022";
+            color: #CD91AC;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
         .top-left {
             position: fixed;
-            margin-top: 15px;
+            top: 20px;
             left: 25px;
             font-family: 'Poetsen One', cursive;
             font-size: 24px;
@@ -65,55 +82,78 @@
             background-color: #CD91AC;
             color: #FFF;
             font-family: 'Poetsen One', cursive;
-            font-size: 24px;
-            text-shadow: 0px 0px 1px #000;
-            box-shadow: 3px 3px 3px #3D3F4B;
-            padding: 10px 20px;
+            font-size: 20px;
+            text-shadow: 0px 0px 3px #000;
+            box-shadow: 3px 3px 8px rgba(61, 63, 75, 0.5);
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
         }
         .home-button:hover {
             background-color: #A8687D;
+            transform: translateY(-3px);
         }
         a {
             text-decoration: none;
             color: inherit;
         }
-        .underline {
+        .link-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.advanced-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #FFF;
+    border: 2px solid #CD91AC;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: #CD91AC;
+    font-weight: bold;
+    text-decoration: none;
+}
+.advanced-link:hover {
+    background-color: #CD91AC;
+    color: #FFF;
+} {
             text-decoration: underline;
         }
         footer {
             background-color: #3D3F4B;
             color: #FFFFFF;
-            padding: 10px 0;
+            padding: 20px 0;
             font-size: 14px;
             text-align: center;
             width: 100%;
             margin-top: auto;
+            box-shadow: 0 -3px 15px rgba(0,0,0,0.1);
         }
         .footer-text {
             color: #FFFFFF;
         }
         @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
             .project {
                 max-width: 90%;
-                margin: 10px auto;
-                padding: 15px;
+                margin: 15px auto;
+                padding: 20px;
             }
             h1 {
                 font-size: 2em;
             }
             .project h2 {
-                font-size: 1.2em;
+                font-size: 1.5em;
             }
             .project p, .project ul li {
-                font-size: 0.9em;
+                font-size: 1em;
             }
             .home-button {
-                font-size: 20px;
-                padding: 8px 16px;
+                font-size: 18px;
+                padding: 10px 20px;
             }
         }
     </style>
@@ -124,17 +164,14 @@
     </div>
     <div class="container">
         <h1>My Project Portfolio</h1>
-
-        
-
         <div class="project">
-            <h2><a href="https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original" target="_blank" class="underline">Wisconsin Breast Cancer Database</a> Analysis</h2>
+            <h2><div class="link-container">
+    <a href="https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original" target="_blank" class="advanced-link underline">Wisconsin Breast Cancer Database Analysis</a>
+</div></h2>
             <p><strong>Date:</strong> March 20, 2024</p>
             <p><strong>Technologies:</strong> Python, VBA</p>
-            <p><strong>Project Description:</strong></p>
-            <p>This project focused on the comprehensive analysis of the <a href="https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original" target="_blank" class="underline">Wisconsin Breast Cancer Database</a> from the University of Wisconsin Hospital, a dataset provided by <a href="https://scholar.google.com/citations?user=R-kw9JYAAAAJ&hl=en" target="_blank" class="underline">Dr. William H. Wolberg</a>. Leveraging Python and VBA, the project delved into clinical data on breast cancer samples to uncover critical insights.</p>
-            <p><strong>Objectives and Methodology:</strong></p>
-            <p>Utilizing advanced machine learning techniques, the project aimed to identify significant associations between various clinical features and breast cancer. The analysis facilitated the construction of robust classification models, aiding in precise medical diagnoses. The methodology encompassed a thorough literature review, meticulous data preprocessing, and sophisticated visualization and analysis.</p>
+            <p><strong>Project Description:</strong> This project focused on the comprehensive analysis of the <a href="https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original" target="_blank">Wisconsin Breast Cancer Database</a> from the University of Wisconsin Hospital, a dataset provided by <a href="https://scholar.google.com/citations?user=R-kw9JYAAAAJ&hl=en" target="_blank">Dr. William H. Wolberg</a>. Leveraging Python and VBA, the project delved into clinical data on breast cancer samples to uncover critical insights.</p>
+            <p><strong>Objectives and Methodology:</strong> Utilizing advanced machine learning techniques, the project aimed to identify significant associations between various clinical features and breast cancer. The analysis facilitated the construction of robust classification models, aiding in precise medical diagnoses. The methodology encompassed a thorough literature review, meticulous data preprocessing, and sophisticated visualization and analysis.</p>
             <p><strong>Achievements:</strong></p>
             <ul>
                 <li>In-Depth Analysis: Delivered a detailed exploration of breast cancer diagnosis, offering valuable data support for ongoing medical research.</li>
@@ -142,16 +179,17 @@
                 <li>Technological Proficiency: Demonstrated adeptness in Python and VBA for data analysis, preprocessing, and visualization.</li>
             </ul>
         </div>
-
         <div class="project">
-            <h2> Technology Consulting - Ivey School of Business & IBM</h2>
+            <h2>Technology Consulting - Ivey School of Business & IBM</h2>
             <p><strong>Date:</strong> January 28, 2024</p>
-            <p><strong>Project Description:</strong></p>
-            <p> Develop an AI-driven sentiment analysis tool to process and evaluate consumer reviews of new energy vehicles. The project involves data collection, preprocessing, sentiment analysis model development, user interface design, and deployment. The goal is to provide accurate insights into consumer opinions, aiding potential buyers in making informed decisions.</p>
+            <p><strong>Project Description:</strong> Developed an AI-driven sentiment analysis tool to process and evaluate consumer reviews of new energy vehicles. The project involved data collection, preprocessing, sentiment analysis model development, user interface design, and deployment. The goal was to provide accurate insights into consumer opinions, aiding potential buyers in making informed decisions.</p>
             <p><strong>Achievements:</strong></p>
-            Provided detailed analysis of consumer reviews, enhancing decision-making for buyers. Cited relevant literature, validating and extending existing research.
-Delivered a scalable and user-friendly solution for industry application. As the team leader, I received positive feedback from the judges for presenting an innovative partnership proposal between IBM and Superpowered, focusing on technology integration and market expansion. The proposal highlighted potential synergies and strategic benefits, demonstrating our ability to think creatively and drive value through collaboration.
-
+            <ul>
+                <li>Detailed Analysis: Provided in-depth analysis of consumer reviews, enhancing decision-making for buyers.</li>
+                <li>Literature Validation: Cited relevant literature, validating and extending existing research.</li>
+                <li>Scalable Solution: Delivered a scalable and user-friendly solution for industry application.</li>
+                <li>Leadership and Presentation: As the team leader, received positive feedback from judges for presenting an innovative partnership proposal between IBM and Superpowered, focusing on technology integration and market expansion.</li>
+            </ul>
         </div>
     </div>
     <footer>

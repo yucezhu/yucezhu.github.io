@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #CD91AC, #FFC1D6);
+            background: yellow; /* 修改为黄色背景 */
             color: #3D3F4B;
             margin: 0;
             padding: 0;
@@ -56,26 +56,26 @@
         }
         .button:hover i {
             transform: scale(1.2);
-            color: #CD91AC;
+            color: yellow; /* 修改为黄色 */
         }
         .neon-button {
-            background-color: #CD91AC;
+            background-color: yellow; /* 修改按钮背景为黄色 */
             color: #3D3F4B;
             font-size: 20px;
             padding: 10px 20px;
             margin: 10px;
             border-radius: 10px;
-            box-shadow: 0 0 5px #d5a6bd, 0 0 10px #d5a6bd, 0 0 15px #d5a6bd, 0 0 20px #d5a6bd;
+            box-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFD700;
         }
         .neon-button:hover {
             animation: neonGlow 1.5s infinite alternate;
         }
         @keyframes neonGlow {
             0%, 100% {
-                box-shadow: 0 0 5px #d5a6bd, 0 0 10px #d5a6bd, 0 0 15px #d5a6bd, 0 0 20px #d5a6bd;
+                box-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FFD700, 0 0 20px #FFD700;
             }
             50% {
-                box-shadow: 0 0 20px #ff79c6, 0 0 30px #ff79c6, 0 0 40px #ff79c6, 0 0 50px #ff79c6;
+                box-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFD700, 0 0 50px #FFD700;
             }
         }
         .button-group, .neon-button-group {
@@ -93,19 +93,19 @@
             font-weight: 900;
         }
         .home-button {
-            background-color: #fff;
-            color: #CD91AC;
+            background-color: yellow; /* 修改为黄色 */
+            color: #3D3F4B;
             font-family: Arial, sans-serif;
             font-size: 18px;
             font-weight: 900;
             padding: 10px 20px;
-            border: 2px solid #CD91AC;
+            border: 2px solid yellow; /* 修改为黄色 */
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
         .home-button:hover {
-            background-color: #CD91AC;
+            background-color: #FFD700; /* 悬停时使用金黄色 */
             color: #fff;
             box-shadow: 0 0 15px rgba(0,0,0,0.3);
             transform: translateY(-2px);
@@ -197,8 +197,6 @@
             <button class="neon-button" onclick="window.location.href='about.html'">Learn More About Me</button>
             <button class="neon-button" onclick="window.location.href='project.html'">See My Projects</button>
             <button class="neon-button" onclick="window.location.href='resume.html'">View My Resume</button>
-            <button class="neon-button" onclick="window.location.href='Auto.html'">Auto & Property Insurance Quotes</button>
-            <button class="neon-button" onclick="window.location.href='design.html'">Design Services</button>
         </div>
     </div>
      <footer>
